@@ -1,0 +1,65 @@
+<main>
+  <div class="title-results">
+    <div class="horz-image-container">
+      <img
+        *ngIf="singleMovie.backdrop_path"
+        src="https://image.tmdb.org/t/p/original/{{
+          singleMovie.backdrop_path
+        }}"
+      />
+      <img *ngIf="!singleMovie.backdrop_path && !singleMovie.poster_path" src="../../../assets/img/default-img.jpg" />
+    </div>
+    <div class="vert-image-container">
+      <img
+        *ngIf="!singleMovie.backdrop_path && singleMovie.poster_path"
+        src="https://image.tmdb.org/t/p/original/{{ singleMovie.poster_path }}"
+      />
+    </div>
+    <div class="details-wrap">
+      <h2>{{ singleMovie.title }}</h2>
+    <div class="description">
+        <p>Release Date: {{ singleMovie.release_date }}</p>
+        <p>Rating: {{ singleMovie.vote_average }}</p>
+        <div class="genres">
+          <p>Genres:</p><p *ngFor="let genre of newGenres">{{ genre }}</p>
+        </div>
+    </div>
+    </div>
+    <div class="listIt">
+        <button (click)="showPopup()" class="info">More Info</button>
+      <div *ngIf="popupIndex === i">
+        <div class="overlay">
+          <div class="boxes">
+            <div class="horz-image-container">
+              <img
+                *ngIf="singleMovie.backdrop_path"
+                src="https://image.tmdb.org/t/p/original/{{
+                  singleMovie.backdrop_path
+                }}"
+              />
+            <img *ngIf="!singleMovie.backdrop_path && !singleMovie.poster_path" src="../../../assets/img/default-img.jpg" />
+            </div>
+            <div class="vert-image-container">
+              <img
+                *ngIf="!singleMovie.backdrop_path && singleMovie.poster_path"
+                src="https://image.tmdb.org/t/p/original/{{ singleMovie.poster_path }}"
+              />
+            </div>
+            <div class="movie-pop-details">
+              <h2>{{ singleMovie.title }}</h2>
+              <p>{{ singleMovie.overview }}</p>
+              <small><p>Release Date: {{ singleMovie.release_date }}</p>
+              <p>Rating: {{ singleMovie.vote_average }}</p>
+              <div class="genres">
+                <p>Genres:</p><p *ngFor="let genre of newGenres">{{ genre }}</p>
+              </div></small>
+              <a (click)="closePopup()" class="back"><i class="far fa-times-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button (click)="isWatchList()">WatchList</button>
+      <!-- <button [ngStyle]="singleMovie.watchlist === true ? 'onwatchlist' : ''" (click)="isWatchList()">WatchList</button> -->
+    </div>
+  </div>
+</main>

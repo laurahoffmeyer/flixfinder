@@ -1,0 +1,24 @@
+<div class="watchlist-movie">
+    <div class="horz-image-container">
+        <img *ngIf="wlMovie.backdrop_path" src="https://image.tmdb.org/t/p/original/{{ wlMovie.backdrop_path }}" />
+        <img *ngIf="!wlMovie.backdrop_path && !wlMovie.poster_path" src="../../../assets/img/default-img.jpg" />
+    </div>
+    <div class="vert-image-container">
+        <img
+        *ngIf="!wlMovie.backdrop_path && wlMovie.poster_path"
+        src="https://image.tmdb.org/t/p/original/{{ wlMovie.poster_path }}"
+        />
+    </div>
+    <div class="wlDetails">
+        <h2>{{ wlMovie.title }}</h2>
+        <p>{{ wlMovie.overview }}</p>
+        <div class="detailline">
+            <p>Release Date: {{ wlMovie.release_date }}</p>
+            <p>Rating: {{ wlMovie.vote_average }}</p>
+            <div class="genres">
+                <p *ngFor="let genre of newGenres">{{ genre }}</p>
+            </div>
+        </div>
+        <button (click)="removeFromWatchlist(index)">Remove from Watchlist</button>
+    </div>
+</div>

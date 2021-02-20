@@ -1,0 +1,12 @@
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+#backdrop-bg {
+    min-height: 300px;
+    width: 100%;
+    background: var(--backdrop);
+    background-position: center;
+    background-size: cover;
+}

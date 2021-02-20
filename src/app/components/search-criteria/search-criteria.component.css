@@ -1,0 +1,106 @@
+h1 {
+  color: #F05454;
+}
+
+.logo img {
+  max-width: 300px;
+  height: auto;
+  margin-top: 20px;
+}
+
+hr {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-container {
+  background-color: #E8E8E8;
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
+  padding: 20px 5px;
+  box-shadow: 0 0 25px #F05454;
+}
+
+.forms-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.wl-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wl-btn button {
+  width: auto;
+}
+
+.logo {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 5px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+label {
+  color: #F05454;
+  padding-top: 15px;
+}
+
+button {
+  background: #F05454;
+  color: #E8E8E8;
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+}
+
+.watchlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h5 {
+  color: #F05454;
+}
+
+@media only screen and (min-width: 768px) {
+  .search-container {
+    width: 768px;
+  }
+
+  form {
+    width: 50%;
+  }  
+  
+}

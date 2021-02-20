@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#body, html {
+    margin: 0px;
+    padding: 0px;
+    background-color: #222831;
+  }
+
+button {
+    border: none;
+    padding: 7px 10px;
+}
+
+button:hover, a:hover {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+button {
+  font-family: 'Bebas Neue', cursive;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p,
+span,
+input {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Grey - #E8E8E8
+Red - #F05454
+Blue - #30475E
+Black - #222831 
+SUPER DARK - #111419
+DARKEST - #080a0c */
